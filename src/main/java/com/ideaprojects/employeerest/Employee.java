@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-class Employee {
+public class Employee {
 
     private @Id @GeneratedValue Long id;
     private String name;

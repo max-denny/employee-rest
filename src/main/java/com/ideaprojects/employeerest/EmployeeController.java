@@ -57,7 +57,7 @@ class EmployeeController {
 	// 		.orElseThrow(() -> new EmployeeNotFoundException(id));
     // }
     
-    @GetMapping("/employees/{id}")
+    @GetMapping(value="/employees/{id}", produces={"application/hal+json"})
 Resource<Employee> one(@PathVariable Long id) {
 
 	Employee employee = repository.findById(id)
